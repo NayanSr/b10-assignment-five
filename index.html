@@ -12,7 +12,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="">
-    <header class="bg-fuchsia-50 ">
+    <header class="bg-fuchsia-50">
       <section class="container mx-auto">
         <div class="navbar">
           <div class="navbar-start">
@@ -33,17 +33,65 @@
           </div>
         </div>
       </section>
-      
     </header>
     <main>
-        <section class="container mx-auto mt-9">
-            <div class="max-w-60 mx-auto flex gap-6">
-                <a class="btn bg-lime-400 text-xl">Donation</a>
-                <a class="btn bg-lime-400 text-xl">History</a>
+      <section class="container mx-auto mt-9">
+        <div class="max-w-60 mx-auto flex gap-6">
+          <a class="btn bg-lime-400 text-xl">Donation</a>
+          <a class="btn bg-lime-400 text-xl">History</a>
+        </div>
+      </section>
+      <!--? Card -01 Starts  -->
+      <section
+        class="container mx-auto mt-10 border-solid rounded-2xl border-2 border-gray-400"
+      >
+        <div class="hero">
+          <div class="hero-content flex-col lg:flex-row">
+            <div class="text-center mr-4">
+              <img src="images/noakhali.png" alt="" />
             </div>
-            
-          </section>
+
+            <div class="card w-1/2">
+              <div class="flex bg-slate-200 w-32 rounded-md p-2">
+                <img src="images/coin.png" alt="" />
+                <h2 class="text-xl font-bold mx-2">0</h2>
+                <h2 class="text-xl font-bold">BDT</h2>
+              </div>
+              <h2 class="text-[18px] font-bold">
+                Donate for Flood at Noakhali, Bangladesh
+              </h2>
+              <p class="py-6">
+                TTTTTTTTTTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTTTTT TTTTTTTTTTTTT
+              </p>
+              <input
+              id="input-donate-noakhali"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="input input-bordered my-4"
+                required
+              />
+              <button id="btn-donate-now-noakhali" class="rounded-lg bg-lime-400 text-xl py-2 font-bold">
+                Donate now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--? Card -01 End  -->
+      <!--? Card -02 Starts  -->
+
+      <!--? Card -02 End  -->
+      <!--? Card -03 Starts  -->
+
+      <!--? Card -03 End  -->
+      <!--* History Start  -->
+    <section id="history-container" class="container mx-auto mt-10 border-solid rounded-2xl border-2 border-gray-400">
+      <h2>Here is all history</h2>
+    </section>
+      <!--* History End  -->
     </main>
     <footer></footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
