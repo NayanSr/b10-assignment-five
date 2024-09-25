@@ -27,7 +27,7 @@
           <div class="navbar-end">
             <div class="flex items-center gap-4">
               <img src="images/coin.png" alt="Navigation Logo" />
-              <h1 class="text-1xl font-semibold">5500</h1>
+              <h1 id="main-balance" class="text-1xl font-semibold">5500</h1>
               <h1 class="text-1xl font-semibold">BDT</h1>
             </div>
           </div>
@@ -54,7 +54,7 @@
             <div class="card w-1/2">
               <div class="flex bg-slate-200 w-32 rounded-md p-2">
                 <img src="images/coin.png" alt="" />
-                <h2 class="text-xl font-bold mx-2">0</h2>
+                <h2 id="noakhali-balance" class="text-xl font-bold mx-2">0</h2>
                 <h2 class="text-xl font-bold">BDT</h2>
               </div>
               <h2 class="text-[18px] font-bold">
@@ -64,15 +64,41 @@
                 TTTTTTTTTTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTTTTT TTTTTTTTTTTTT
               </p>
               <input
-              id="input-donate-noakhali"
+                id="input-donate-noakhali"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered my-4"
                 required
               />
-              <button id="btn-donate-now-noakhali" class="rounded-lg bg-lime-400 text-xl py-2 font-bold">
+              <button
+              
+                id="btn-donate-now-noakhali"
+                class="rounded-lg bg-lime-400 text-xl py-2 font-bold"
+              >
                 Donate now
               </button>
+              <!--? Modal Start -->
+             
+              <dialog
+                id="my_modal_5"
+                class="modal modal-bottom sm:modal-middle"
+              >
+                <div class="modal-box flex items-center justify-center flex-col">
+                  <h3 class="text-lg font-bold">Congrates!</h3>
+                  <img src="images/coin.png" alt="">
+                  <p class="py-4 text-lg">
+                   You Have Donated for Humankind
+                  </p>
+                  <h2 class="text-xl font-bold">Successfully</h2>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close Confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              <!--? Modal End -->
             </div>
           </div>
         </div>
@@ -86,9 +112,9 @@
 
       <!--? Card -03 End  -->
       <!--* History Start  -->
-    <section id="history-container" class="container mx-auto mt-10 border-solid rounded-2xl border-2 border-gray-400">
-      <h2>Here is all history</h2>
-    </section>
+      <section id="history-container" class="container mx-auto mt-10">
+        <h2>Here is all history</h2>
+      </section>
       <!--* History End  -->
     </main>
     <footer></footer>
