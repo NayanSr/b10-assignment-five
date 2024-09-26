@@ -1,12 +1,24 @@
 //! common function cor amount calculation
-function balanceCalculation(donationProject, donated){
+function balanceCalculation(donationProject, donated,localUpdateField){
   const mainBalance = document.getElementById("main-balance").innerText;
   const mainBalanceAmount = parseFloat(mainBalance);
   document.getElementById("main-balance").innerText =
   mainBalanceAmount - donated;
-document.getElementById("noakhali-balance").innerText =
+document.getElementById(localUpdateField).innerText =
 donationProject + donated;
 }
+
+
+//! go to blog / QnA
+document.getElementById('blog').addEventListener('click',function(){
+  window.location.href='/faq.html'
+})
+
+/* //! go back to home page
+document.getElementById('back-to-home').addEventListener('click',function(){
+  window.location.href='/index.html'
+  console.log('object');
+}) */
 
 
 //? Toggling
@@ -56,13 +68,98 @@ document
       "p-4"
     );
 
-    if (!isNaN(donationAmount) && !hasLetter) {
+    if (!isNaN(donationAmount) && !hasLetter && donationAmount>0) {
       div.innerHTML = `
    <p class="mb-4 text-lg font-bold"> ${donation} Taka is donated for Flood at Noakhali, Bangladesh</p>
    <small> ${new Date()} </small>
    `;
       my_modal_5.showModal();
-      balanceCalculation(noakhaliBalanceAmount,donationAmount)
+      balanceCalculation(noakhaliBalanceAmount,donationAmount,'noakhali-balance')
+      /*
+       document.getElementById("main-balance").innerText =
+        mainBalanceAmount - donationAmount;
+      document.getElementById("noakhali-balance").innerText =
+        noakhaliBalanceAmount + donationAmount; 
+        */
+
+      historycontainer.appendChild(div);
+    } else {
+      alert("Inpute is invalide");
+    }
+  });
+
+//! Feni donation
+  document
+  .getElementById("btn-donate-now-feni")
+  .addEventListener("click", function () {
+    const donation = document.getElementById("input-donate-feni").value;
+    const donationAmount = parseFloat(donation); //! add
+    const hasLetter = /[a-zA-Z]/.test(donation);
+    //! main
+    const feniBalance =
+      document.getElementById("feni-balance").innerText;
+    const feniBalanceAmount = parseFloat(feniBalance);
+    const historycontainer = document.getElementById("history-container");
+    const div = document.createElement("div");
+    div.classList.add(
+      "mt-10",
+      "border-solid",
+      "rounded-2xl",
+      "border-2",
+      "border-gray-400",
+      "p-4"
+    );
+
+    if (!isNaN(donationAmount) && !hasLetter && donationAmount>0) {
+      div.innerHTML = `
+   <p class="mb-4 text-lg font-bold"> ${donation} Taka is donated for Flood relief in Feni, Bangladesh</p>
+   <small> ${new Date()} </small>
+   `;
+      my_modal_5.showModal();
+      balanceCalculation(feniBalanceAmount,donationAmount,'feni-balance')
+      /*
+       document.getElementById("main-balance").innerText =
+        mainBalanceAmount - donationAmount;
+      document.getElementById("noakhali-balance").innerText =
+        noakhaliBalanceAmount + donationAmount; 
+        */
+
+      historycontainer.appendChild(div);
+    } else {
+      alert("Inpute is invalide");
+    }
+  });
+
+
+  //! Quota Injured donation
+  document
+  .getElementById("btn-donate-now-quota")
+  .addEventListener("click", function () {
+    const donation = document.getElementById("input-donate-quota").value;
+    const donationAmount = parseFloat(donation); //! add
+    const hasLetter = /[a-zA-Z]/.test(donation);
+    //! main
+    const quotaBalance =
+      document.getElementById("quota-balance").innerText;
+    const quotaBalanceAmount = parseFloat(quotaBalance);
+    const historycontainer = document.getElementById("history-container");
+    const div = document.createElement("div");
+    div.classList.add(
+      "mt-10",
+      "border-solid",
+      "rounded-2xl",
+      "border-2",
+      "border-gray-400",
+      "p-4"
+    );
+
+    if (!isNaN(donationAmount) && !hasLetter && donationAmount>0) {
+      div.innerHTML = `
+   <p class="mb-4 text-lg font-bold"> ${donation} QUOTA, Bangladesh</p>
+   <small> ${new Date()} </small>
+   `;
+      my_modal_5.showModal();
+      balanceCalculation(quotaBalanceAmount,donationAmount,'quota-balance')
       /*
        document.getElementById("main-balance").innerText =
         mainBalanceAmount - donationAmount;

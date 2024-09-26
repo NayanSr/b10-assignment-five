@@ -11,12 +11,12 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="">
-    <header class="bg-fuchsia-50">
+  <body>
+    <header class="bg-fuchsia-50 sticky -top-10">
       <section class="container mx-auto">
         <div class="navbar">
           <div class="navbar-start">
-            <a class="btn bg-lime-400">Blog</a>
+            <a id="blog" class="btn bg-lime-400">Blog</a>
           </div>
           <div class="navbar-center">
             <div class="flex items-center gap-4">
@@ -33,94 +33,178 @@
           </div>
         </div>
       </section>
-    </header>
-
-
-
-    <main>
-      <section class="container mx-auto mt-9">
+      <section class="container mx-auto mt-9 bg-white">
         <div class="max-w-60 mx-auto flex gap-6">
           <a id="btn-top-donation" class="btn bg-lime-400 text-xl">Donation</a>
           <a id="btn-top-history" class="btn text-xl">History</a>
         </div>
       </section>
+    </header>
 
-
-
-
+    <main>
       <div id="donation-fields">
         <!--? Card -01 Starts  -->
         <section
-        class="container mx-auto mt-10 border-solid rounded-2xl border-2 border-gray-400"
-      >
-        <div class="hero">
-          <div class="hero-content flex-col lg:flex-row">
-            <div class="text-center mr-4">
-              <img src="images/noakhali.png" alt="" />
-            </div>
-
-            <div class="card w-1/2">
-              <div class="flex bg-slate-200 w-32 rounded-md p-2">
-                <img src="images/coin.png" alt="" />
-                <h2 id="noakhali-balance" class="text-xl font-bold mx-2">0</h2>
-                <h2 class="text-xl font-bold">BDT</h2>
+          class="container mx-auto mt-10 border-solid rounded-2xl border-2 border-gray-400"
+        >
+          <div class="hero">
+            <div class="hero-content flex-col lg:flex-row">
+              <div class="text-center mr-4">
+                <img src="images/noakhali.png" alt="" />
               </div>
-              <h2 class="text-[18px] font-bold">
-                Donate for Flood at Noakhali, Bangladesh
-              </h2>
-              <p class="py-6">
-                TTTTTTTTTTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTTTTTT TTTTTTTTTTTTT
-              </p>
-              <input
-                id="input-donate-noakhali"
-                type="text"
-                placeholder="Write Donation Amount"
-                class="input input-bordered my-4"
-                required
-              />
-              <button
-              
-                id="btn-donate-now-noakhali"
-                class="rounded-lg bg-lime-400 text-xl py-2 font-bold"
-              >
-                Donate now
-              </button>
-              <!--? Modal Start -->
-             
-              <dialog
-                id="my_modal_5"
-                class="modal modal-bottom sm:modal-middle"
-              >
-                <div class="modal-box flex items-center justify-center flex-col">
-                  <h3 class="text-lg font-bold">Congrates!</h3>
-                  <img src="images/coin.png" alt="">
-                  <p class="py-4 text-lg">
-                   You Have Donated for Humankind
-                  </p>
-                  <h2 class="text-xl font-bold">Successfully</h2>
-                  <div class="modal-action">
-                    <form method="dialog">
-                      <!-- if there is a button in form, it will close the modal -->
-                      <button class="btn">Close Confirmation</button>
-                    </form>
-                  </div>
+
+              <div class="card w-1/2">
+                <div class="flex bg-slate-200 w-32 rounded-md p-2">
+                  <img src="images/coin.png" alt="" />
+                  <h2 id="noakhali-balance" class="text-xl font-bold mx-2">
+                    0
+                  </h2>
+                  <h2 class="text-xl font-bold">BDT</h2>
                 </div>
-              </dialog>
-              <!--? Modal End -->
+                <h2 class="text-[18px] font-bold">
+                  Donate for Flood at Noakhali, Bangladesh
+                </h2>
+                <p class="py-6">
+                  The flood situation in Noakhali has worsened due to continuous
+                  rain and upstream water, leading many people to seek shelters.
+                  However, space is unavailable in remote areas, forcing many to
+                  live in waterlogged conditions.The flood situation further
+                  deteriorated in the district town of Maizdi and in the Sadar
+                  upazila. Meanwhile, residents have reported that relief is not
+                  properly reaching many remote areas of the district. Flood
+                  victims are desperately seeking aid.
+                </p>
+                <input
+                  id="input-donate-noakhali"
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered my-4"
+                  required
+                />
+                <button
+                  id="btn-donate-now-noakhali"
+                  class="rounded-lg bg-lime-400 text-xl py-2 font-bold"
+                >
+                  Donate now
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!--? Card -01 End  -->
+        </section>
+        <!--? Card -01 End  -->
 
-      <!--? Card -02 Starts  -->
+        <!--? Card -02 Starts  -->
+        <section
+          class="container mx-auto mt-10 border-solid rounded-2xl border-2 border-gray-400"
+        >
+          <div class="hero">
+            <div class="hero-content flex-col lg:flex-row">
+              <div class="text-center mr-4">
+                <img src="images/feni.png" alt="" />
+              </div>
 
-      <!--? Card -02 End  -->
-      <!--? Card -03 Starts  -->
+              <div class="card w-1/2">
+                <div class="flex bg-slate-200 w-32 rounded-md p-2">
+                  <img src="images/coin.png" alt="" />
+                  <h2 id="feni-balance" class="text-xl font-bold mx-2">600</h2>
+                  <h2 class="text-xl font-bold">BDT</h2>
+                </div>
+                <h2 class="text-[18px] font-bold">
+                  Donate for Flood Relief in Feni, Bangladesh
+                </h2>
+                <p class="py-6">
+                  The death toll in the recent flash floods in Feni has risen to
+                  23, according to district administration sources as of Friday
+                  night. The first fatality was reported on the night of August
+                  24, when locals discovered a body floating in knee-deep water
+                  in front of Sonali Bank on Mizan Road in Feni.
+                </p>
+                <input
+                  id="input-donate-feni"
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered my-4"
+                  required
+                />
+                <button
+                  id="btn-donate-now-feni"
+                  class="rounded-lg bg-lime-400 text-xl py-2 font-bold"
+                >
+                  Donate now
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--? Card -02 End  -->
+        <!--? Card -03 Starts  -->
+        <section
+          class="container mx-auto mt-10 border-solid rounded-2xl border-2 border-gray-400"
+        >
+          <div class="hero">
+            <div class="hero-content flex-col lg:flex-row">
+              <div class="text-center mr-4">
+                <img src="images/quota-protest.png" alt="" />
+              </div>
 
-      <!--? Card -03 End  -->
+              <div class="card w-1/2">
+                <div class="flex bg-slate-200 w-32 rounded-md p-2">
+                  <img src="images/coin.png" alt="" />
+                  <h2 id="quota-balance" class="text-xl font-bold mx-2">
+                    2400
+                  </h2>
+                  <h2 class="text-xl font-bold">BDT</h2>
+                </div>
+                <h2 class="text-[18px] font-bold">
+                  Aid for Injured in the Quota Movement
+                </h2>
+                <p class="py-6">
+                  Hasan Mehedi, a senior reporter for Dhaka Times, was shot
+                  during violence in Jatrabari on the evening of July 18. He was
+                  declared dead after being taken to the emergency department of
+                  Dhaka Medical College (DMCH). Tahir Zaman Priyo, freelance
+                  photojournalist, was shot in the head while taking pictures at
+                  Science Laboratory intersection on the afternoon of July 19
+                  and died on the spot.
+                </p>
+                <input
+                  id="input-donate-quota"
+                  type="text"
+                  placeholder="Write Donation Amount"
+                  class="input input-bordered my-4"
+                  required
+                />
+                <button
+                  id="btn-donate-now-quota"
+                  class="rounded-lg bg-lime-400 text-xl py-2 font-bold"
+                >
+                  Donate now
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--? Card -03 End  -->
       </div>
-  
+
+      <!--? Modal Start -->
+
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box flex items-center justify-center flex-col">
+          <h3 class="text-lg font-bold">Congrates!</h3>
+          <img src="images/coin.png" alt="" />
+          <p class="py-4 text-lg">You Have Donated for Humankind</p>
+          <h2 class="text-xl font-bold">Successfully</h2>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close Confirmation</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+      <!--? Modal End -->
+
       <!--* History Start  -->
       <section id="history-container" class="container mx-auto mt-10 hidden">
         <h2>Here is all history</h2>
