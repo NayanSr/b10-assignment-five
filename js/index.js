@@ -56,7 +56,6 @@ document
     const noakhaliBalance =
       document.getElementById("noakhali-balance").innerText;
     const noakhaliBalanceAmount = parseFloat(noakhaliBalance);
-    // console.log(mainBalanceAmount, noakhaliBalanceAmount);
     const historycontainer = document.getElementById("history-container");
     const div = document.createElement("div");
     div.classList.add(
@@ -75,14 +74,8 @@ document
    `;
       my_modal_5.showModal();
       balanceCalculation(noakhaliBalanceAmount,donationAmount,'noakhali-balance')
-      /*
-       document.getElementById("main-balance").innerText =
-        mainBalanceAmount - donationAmount;
-      document.getElementById("noakhali-balance").innerText =
-        noakhaliBalanceAmount + donationAmount; 
-        */
-
       historycontainer.appendChild(div);
+      document.getElementById("input-donate-noakhali").value='';
     } else {
       alert("Inpute is invalide");
     }
@@ -117,14 +110,8 @@ document
    `;
       my_modal_5.showModal();
       balanceCalculation(feniBalanceAmount,donationAmount,'feni-balance')
-      /*
-       document.getElementById("main-balance").innerText =
-        mainBalanceAmount - donationAmount;
-      document.getElementById("noakhali-balance").innerText =
-        noakhaliBalanceAmount + donationAmount; 
-        */
-
       historycontainer.appendChild(div);
+      document.getElementById("input-donate-feni").value='';
     } else {
       alert("Inpute is invalide");
     }
@@ -153,21 +140,18 @@ document
       "p-4"
     );
 
+
+
+
     if (!isNaN(donationAmount) && !hasLetter && donationAmount>0) {
       div.innerHTML = `
-   <p class="mb-4 text-lg font-bold"> ${donation} QUOTA, Bangladesh</p>
+   <p class="mb-4 text-lg font-bold"> ${donation} Taka is Donated for Aid for injured in the Quota Movement, Bangladesh</p>
    <small> ${new Date()} </small>
    `;
       my_modal_5.showModal();
       balanceCalculation(quotaBalanceAmount,donationAmount,'quota-balance')
-      /*
-       document.getElementById("main-balance").innerText =
-        mainBalanceAmount - donationAmount;
-      document.getElementById("noakhali-balance").innerText =
-        noakhaliBalanceAmount + donationAmount; 
-        */
-
       historycontainer.appendChild(div);
+      document.getElementById("input-donate-quota").value='';
     } else {
       alert("Inpute is invalide");
     }
