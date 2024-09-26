@@ -11,7 +11,7 @@ donationProject + donated;
 
 //! go to blog / QnA
 document.getElementById('blog').addEventListener('click',function(){
-  window.location.href='/faq.html'
+  window.location.href='faq.html'
 })
 
 /* //! go back to home page
