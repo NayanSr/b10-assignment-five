@@ -14,11 +14,7 @@ document.getElementById('blog').addEventListener('click',function(){
   window.location.href='faq.html'
 })
 
-/* //! go back to home page
-document.getElementById('back-to-home').addEventListener('click',function(){
-  window.location.href='/index.html'
-  console.log('object');
-}) */
+
 
 
 //? Toggling
